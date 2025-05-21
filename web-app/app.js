@@ -35,4 +35,15 @@ tg.onEvent('mainButtonClicked', function() {
         action: 'main_button_clicked',
         user: user
     }));
-}); 
+});
+
+// Получение доступа к камере и отображение локального видео
+const localVideo = document.getElementById('localVideo');
+navigator.mediaDevices.getUserMedia({ video: true, audio: true })
+    .then(stream => {
+        localVideo.srcObject = stream;
+        // Здесь в будущем будем отправлять stream другим игрокам через WebRTC
+    })
+    .catch(err => {
+        alert('Не удалось получить доступ к камере/микрофону: ' + err);
+    }); 

@@ -47,4 +47,20 @@ button {
 
 button:hover {
     opacity: 0.9;
+}
+
+.video-area {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+#localVideo, .remoteVideo {
+    width: 200px;
+    height: 150px;
+    background: #222;
+    border-radius: 8px;
+    object-fit: cover;
 } 

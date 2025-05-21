@@ -12,7 +12,7 @@ bot.sendMessage(channelId, 'Бот успешно подключен к кана
 // Обработка команды /start
 bot.onText(/\/start/, (msg) => {
     const chatId = msg.chat.id;
-    const webAppUrl = 'https://4c08-2a03-32c0-4-202f-9ca3-f24a-3e92-e90c.ngrok-free.app';
+    const webAppUrl = 'https://black0101.github.io/-mafia-game/web-app/';
 
     bot.sendMessage(chatId, 'Добро пожаловать в игру Мафия!', {
         reply_markup: {
